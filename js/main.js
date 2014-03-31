@@ -73,6 +73,14 @@ TopologicalOrder = function(graph){
 			}
 		}
 	}
+	
+	//Compute ambiguities
+	this.ambiguities = [];
+	for (i = 0; i < this.nodes.length - 1; i += 1){
+		if (this.nodes[i].isDirectlyConnected(this.nodes[i+1]) === false){
+			this.ambiguities.push([this.nodes[i], this.nodes[i+1]]);
+		}
+	}
 };
 
 TopologicalOrder.prototype.visit = function(node){
@@ -106,32 +114,16 @@ TopologicalOrder.prototype.toString = function(){
 	return s;
 };
 
-TopologicalOrder.prototype.getAmbiguousPairList = function(){
-	"use strict";
-	var i, list;
-	list = [];
-	for (i = 0; i < this.nodes.length - 1; i += 1){
-		if (this.nodes[i].isDirectlyConnected(this.nodes[i+1]) === false){
-			list.push([this.nodes[i], this.nodes[i+1]]);
-		}
-	}
-	if (list.length === 0){
-		return null; //No ambiguity
-	}
-	return list;
-};
-
 TopologicalOrder.prototype.getRandomAmbiguousPair = function(){
 	"use strict";
-	var list;
-	list = this.getAmbiguousPairList();
-	if (list === null){
+	if (this.ambiguities.length === 0){
 		return null;
 	}
-	return list[Math.floor(Math.random()*list.length)];
+	console.log(this.ambiguities.length);
+	return this.ambiguities[Math.floor(Math.random()*this.ambiguities.length)];
 };
 
-GameManager = function(){
+GameManager = function(total){
 	"use strict";
 	var that = this;
 	this.state = "stop"; //stop, game, result, about
@@ -139,6 +131,8 @@ GameManager = function(){
 	this.choiceLeft = null;
 	this.choiceRight = null;
 	this.topo = null;
+	this.progress = null;
+	this.total = total;
 	//Prepare items
 	this.items = [];
 	$.ajax({
@@ -158,8 +152,8 @@ GameManager = function(){
 
 GameManager.prototype.getlist = function(){
 	"use strict";
-	var i, x, total = 10, idx = [], list = [];
-	while(idx.length < total){
+	var i, x, idx = [], list = [];
+	while(idx.length < this.total){
 		x = Math.floor(Math.random()*this.items.length);
 		if (idx.indexOf(x) < 0){
 			idx.push(x);
@@ -179,6 +173,7 @@ GameManager.prototype.start = function(){
 	data = this.getlist();
 	this.graph = new Graph(data);
 	this.state = "game";
+	this.progress = 0;
 	this.nextStep();
 };
 
@@ -195,6 +190,12 @@ GameManager.prototype.nextStep = function(){
 	//Perform topological sort and get a random ambiguity
 	this.topo = new TopologicalOrder(this.graph);
 	pair = this.topo.getRandomAmbiguousPair();
+	
+	//Update progress bar
+	this.progress = Math.max(this.progress, this.total - this.topo.ambiguities.length - 1);
+	$('#gameprogress').css("width", (this.progress * 100 / (this.total - 1)) + "%");
+	console.log(this.progress, this.total - this.topo.ambiguities.length - 1);
+	console.log($('#gameprogress').css("width"));
 	
 	if (pair === null){
 		//Game over, show topological order
@@ -280,7 +281,7 @@ $(document).ready(function(){
 	"use strict";
 	var actionLeft, actionRight, actionRestart, actionFacebook, actionPlurk, actionWhat, actionAbout;
 	//Prepare game
-	gameManager = new GameManager();
+	gameManager = new GameManager(7);
 	
 	//Prepare actions
 	actionLeft = function(){
