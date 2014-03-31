@@ -119,7 +119,6 @@ TopologicalOrder.prototype.getRandomAmbiguousPair = function(){
 	if (this.ambiguities.length === 0){
 		return null;
 	}
-	console.log(this.ambiguities.length);
 	return this.ambiguities[Math.floor(Math.random()*this.ambiguities.length)];
 };
 
