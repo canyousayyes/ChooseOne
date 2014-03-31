@@ -1,0 +1,68 @@
+Happiness
+<i class="fa fa-smile-o"></i>
+Childhood Memory
+<span class="icon-pacman"></span>
+Wealth
+<span class="icon-dollar"></span>
+Health
+<i class="fa fa-medkit"></i>
+Life
+<i class="fa fa-plus-square"></i>
+Bravery
+<i class="fa fa-beer"></i>
+Balanced Lifestyle
+<span class="icon-coffee"></span>
+Career
+<i class="fa fa-briefcase"></i>
+Knowledge
+<span class="icon-graduate"></span>
+Family
+<i class="fa fa-home"></i>
+Privacy
+<span class="icon-safe"></span>
+Love
+<i class="fa fa-heart"></i>
+Friendship
+<i class="fa fa-users"></i>
+Justice
+<span class="icon-justice"></span>
+Popularity
+<i class="fa fa-thumbs-o-up"></i>
+Curiosity
+<i class="fa fa-search"></i>
+Speech Freedom
+<i class="fa fa-comments-o"></i>
+(Religious) Belief
+<span class="icon-cross"></span>
+Talent
+<i class="fa fa-lightbulb-o"></i>
+Modern Technology
+<i class="fa fa-mobile"></i>
+Promise
+<i class="fa fa-credit-card"></i>
+Entertainments
+<i class="fa fa-gamepad"></i>
+Enthusiasm
+<span class="icon-fire"></span>
+Lifetime Interests
+<span class="icon-console"></span>
+Social Network
+<i class="fa fa-globe"></i>
+Personal Safety
+<span class="icon-bomb"></span>
+Moral Values
+<i class="fa fa-check-square"></i>
+Nationality
+<span class="icon-profile"></span>
+Appearance
+<span class="icon-user"></span>
+Ambition
+<span class="icon-medal"></span>
+Responsibilities
+<i class="fa fa-cog"></i>
+Democracy
+<span class="icon-vote"></span>
+Politeness
+<i class="fa fa-cutlery"></i>
+Law Obeydience
+<span class="icon-hammer"></span>

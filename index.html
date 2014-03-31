@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Choose One</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<!-- Icomoon -->
+		<link href="css/style.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="css/site.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<!-- Game Panel -->
+			<div id="panelgame" class="jumbotron">
+				<div class="divtable">
+					<!-- Left Button -->
+					<div id="btnleft" class="divcell sidecell btn">
+						<div id="iconleft" class="fontL"></div>
+						<p id="txtleft" class="itemname fontS"></p>
+					</div>
+					<!-- Left Arrow -->
+					<div class="divcell sidecell">
+						<i class="fa fa-arrow-left fontL"></i>
+					</div>
+					<!-- Title -->
+					<div class="divcell maincell">
+						<div id="mainpart" class="noselect">
+							<h1 id="gametitle">CHOOSE<br>ONE<br>TO GIVE UP</h1>
+							<span id="btnwhat" class="btn fontXS">What is this?</span>
+						</div>
+						<div id="whatpart">
+							<h2>What is this?</h2>
+							<p>What is the most important thing in your life?<br>
+							What if you have to give up either the left or the right?<br>
+							Ask your heart, make your decision.<br>
+							This little thing aims to sort your preference.<br>
+							So that when life gives you lemons, you know where your bottom line is.</p>
+							<span id="btnback" class="btn fontXS"><i class="fa fa-undo"></i> Back</span>
+						</div>
+					</div>
+					<!-- Right Arrow -->
+					<div class="divcell sidecell">
+						<i class="fa fa-arrow-right fontL"></i>
+					</div>
+					<!-- Right Button -->
+					<div id="btnright" class="divcell sidecell btn">
+						<div id="iconright" class="fontL"></div>
+						<p id="txtright" class="itemname fontS"></p>
+					</div>
+				</div>
+			</div>
+			<!-- Result Panel -->
+			<div id="panelresult" class="jumbotron">
+				<div class="divtable">
+					<!-- Title -->
+					<div class="divrow"><h1>RESULT</h1></div>
+					<div class="divrow">
+						<!-- Left cell containing the most important item -->
+						<div class="divcell maincell">
+							<div id="iconfirst" class="fontXL"></div>
+							<p id="txtfirst" class="fontS"></p>
+						</div>
+						<!-- A big right angle sign -->
+						<div class="divcell sidecell">
+							<i class="fa fa-angle-right fontXL"></i>
+						</div>
+						<!-- List of other items -->
+						<div id="resultlist" class="divcell listcell"></div>
+						<!-- Vertical seperator -->
+						<div class="divcell vbar1"></div>
+						<div class="divcell vbar2"></div>
+						<!-- Function buttons -->
+						<div class="divcell btncell fontM">
+							<div id="btnrestart" class="divrow btn">
+								<div class="divcell"><i class="fa fa-repeat"></i></div>
+								<div class="divcell txtcell"><u>R</u>estart</div>
+							</div>
+							<div id="btnfacebook" class="divrow btn">
+								<div class="divcell"><i class="fa fa-facebook-square"></i></div>
+								<div class="divcell txtcell"><u>F</u>acebook</div>
+							</div>
+							<div id="btnplurk" class="divrow btn">
+								<div class="divcell"><i class="fa fa-share"></i></div>
+								<div class="divcell txtcell"><u>P</u>lurk</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="panelabout" class="jumbotron noselect">
+				<div class="divtable">
+					<!-- About the game -->
+					<div class="divcell maincell">
+						<h2>ABOUT THE GAME</h2>
+						<p>Ok, I know it is hardly a &quot;game&quot;, I just want to call it that way =D<br>
+						Anyway, if this little thing can solve some of your confusion, then my purpose is fulfilled.</p>
+						<p>I tried my best to make it nice and easy, I hope you feel the same.<br>
+						If you find any bugs, or you have any suggestions, feel free to drop me a message.
+						</p>
+					</div>
+					<!-- Vertical seperator -->
+					<div class="divcell vbar1"></div>
+					<div class="divcell vbar2"></div>
+					<!-- About me -->
+					<div class="divcell maincell">
+						<h2>ABOUT ME</h2>
+						<p>I am Ng Kwun Lam, Gene. Now studying as a undergraduate student in the Chinese University of Hong Kong, Department of Computer Science.</p>
+						<p>I love programming, particularly in web development. I like to explore new things as well as digging deep into any interested topics.</p>
+						<p>Email: gene.ng16@gmail.com<br>
+						Facebook: <a href="https://www.facebook.com/fishball.ng.14" target="_blank">Fishball Ng</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

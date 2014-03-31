@@ -1,0 +1,161 @@
+/* Big containers */
+html, body {
+  height: 100%;
+  background-color: #CC5200;
+}
+body {
+  text-shadow: 0 3px 3px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.container {
+  position: relative;
+  top: 20%;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 100%;
+}
+.jumbotron {
+  color: #EEEEEE;
+  margin: 0;
+}
+.jumbotron h1, .jumbotron .h1 {
+    font-size: 63px;
+}
+.container .jumbotron {
+  border-radius: 0;
+  padding: 24px;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#panelgame {
+  background-color: #FF8C00;
+}
+#panelresult {
+  background-color: #6495ED;
+  display: none;
+}
+#panelabout {
+  color: #030303;
+  background-color: #EEEEEE;
+  display: none;
+  text-shadow: initial;
+}
+/* Small containers */
+.divtable {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.divrow{
+  display: table-row;
+}
+.divcell {
+  display: table-cell;
+  text-align: center;
+}
+#panelgame .sidecell {
+  width: 15%;
+  vertical-align: middle;
+}
+#panelgame .maincell {
+  width: 40%;
+  vertical-align: middle;
+}
+#whatpart {
+  display: none;
+}
+#panelresult .maincell {
+  width: 20%;
+  vertical-align: middle;
+}
+#panelresult .sidecell {
+  width: 10%;
+  vertical-align: middle;
+}
+#panelresult .listcell {
+  width: 35%;
+  vertical-align: middle;
+}
+#panelresult .vbar1 {
+  width: 5%;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+#panelresult .vbar2 {
+  width: 5%;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+#panelresult .btncell {
+  width: 25%;
+  vertical-align: middle;
+}
+#panelresult .itemcell {
+  width: 30%;
+  vertical-align: middle;
+}
+#panelresult .iconcell {
+  vertical-align: middle;
+}
+#panelresult .txtcell {
+  text-align: left;
+  padding-left: 20px;
+}
+#panelabout .maincell {
+  width: 40%;
+  text-align: left;
+}
+#panelabout .vbar1 {
+  width: 5%;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+#panelabout .vbar2 {
+  width: 5%;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+#panelabout p {
+  font-size: 1.2em;
+}
+/* User controls */
+.btn {
+  vertical-align: inherit;
+  font-size: inherit;
+  white-space: inherit;
+}
+.btn:hover,
+.btn:focus {
+  color: inherit;
+}
+.btn:active,
+.btn.active {
+  color: #333;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+}
+.itemname {
+  max-width: inherit;
+  min-height: 1.2em;
+  max-height: 1.2em;
+}
+/* Fonts */
+.fontXS {
+  font-size: 0.9em;
+}
+.fontS {
+  font-size: 1.2em;
+}
+.fontM {
+  font-size: 2.4em;
+}
+.fontL {
+  font-size: 6em;
+}
+.fontXL {
+  font-size: 8em;
+}
