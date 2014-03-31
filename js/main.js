@@ -194,8 +194,6 @@ GameManager.prototype.nextStep = function(){
 	//Update progress bar
 	this.progress = Math.max(this.progress, this.total - this.topo.ambiguities.length - 1);
 	$('#gameprogress').css("width", (this.progress * 100 / (this.total - 1)) + "%");
-	console.log(this.progress, this.total - this.topo.ambiguities.length - 1);
-	console.log($('#gameprogress').css("width"));
 	
 	if (pair === null){
 		//Game over, show topological order
